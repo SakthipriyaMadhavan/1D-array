@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int n;
+    int* a;
+    int total = 0;
+    a = NULL;
+    
+    scanf("%d", &n);
+    
+    if (n < 1000) 
+    {
+       a = (int*) malloc(n * sizeof(int));
+    }
+    else 
+    {
+        return 0;
+    }
+        
+    for (int j = 0; j < n; j++) 
+    {
+        scanf("%d", &a[j]);
+        total += a[j];
+    }
+
+    printf("%d\n", total);
+    return 0;
+}
